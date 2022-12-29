@@ -3,7 +3,7 @@ import { NoteForm } from "./noteForm";
 export function NewNote() {
   return (
     <>
-      <h1 className="mb-4">New Note for this caackk</h1>
+      <h1 className="mb-4">New Note</h1>
       <NoteForm />
     </>
   );
