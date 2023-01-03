@@ -6,7 +6,10 @@ export function NoteForm() {
       <Stack gap={4}>
         <Row>
           <Col>
-            <Form.Group></Form.Group>
+            <Form.Group controlId="title">
+              <Form.Label>Title</Form.Label>
+              <Form.Control />
+            </Form.Group>
           </Col>
         </Row>
       </Stack>
