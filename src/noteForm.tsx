@@ -24,8 +24,14 @@ export function NoteForm() {
             <Form.Control required as="textarea" rows={15} />
           </Form.Group>
         </Row>
-        <Stack direction="horizontal">
-          <Button>Save</Button>
+        <Stack direction="horizontal" gap={2}>
+          <Button type="submit" variant="primary">
+            {" "}
+            Save
+          </Button>
+          <Button type="button" variant="outline-secondary">
+            Cancel
+          </Button>
         </Stack>
       </Stack>
     </Form>
