@@ -1,4 +1,4 @@
-import { Col, Form, FormGroup, Row, Stack } from "react-bootstrap";
+import { Button, Col, Form, FormGroup, Row, Stack } from "react-bootstrap";
 import CreatableReactSelect from "react-select/creatable";
 
 export function NoteForm() {
@@ -22,9 +22,11 @@ export function NoteForm() {
           <Form.Group controlId="markdown">
             <Form.Label>Body</Form.Label>
             <Form.Control required as="textarea" rows={15} />
-            <CreatableReactSelect isMulti />
           </Form.Group>
         </Row>
+        <Stack direction="horizontal">
+          <Button>Save</Button>
+        </Stack>
       </Stack>
     </Form>
   );
