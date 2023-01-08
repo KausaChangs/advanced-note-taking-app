@@ -24,7 +24,12 @@ export function NoteForm() {
             <Form.Control required as="textarea" rows={15} />
           </Form.Group>
         </Row>
-        <Stack direction="horizontal" gap={2}>
+        <Stack
+          direction="horizontal"
+          gap={2}
+          className="justify-content-end
+        "
+        >
           <Button type="submit" variant="primary">
             {" "}
             Save
