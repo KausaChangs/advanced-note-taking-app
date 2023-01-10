@@ -10,7 +10,7 @@ export type Note = {
 export type NoteData = {
   title: string;
   markDown: string;
-  tag: Tag[];
+  tags: Tag[];
 };
 
 export type Tag = {
