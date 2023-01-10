@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import { Button, Col, Form, FormGroup, Row, Stack } from "react-bootstrap";
 import { Link, useHref } from "react-router-dom";
 import CreatableReactSelect from "react-select/creatable";
@@ -6,8 +6,12 @@ import CreatableReactSelect from "react-select/creatable";
 export function NoteForm() {
   const titleRef = useRef<HTMLInputElement>(null);
   const markdownRef = useRef<HTMLTextAreaElement>(null);
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+  }
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Stack gap={4}>
         <Row>
           <Col>
