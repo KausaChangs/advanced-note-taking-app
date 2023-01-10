@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import { Button, Col, Form, FormGroup, Row, Stack } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHref } from "react-router-dom";
 import CreatableReactSelect from "react-select/creatable";
 
 export function NoteForm() {
+  const titleRef = useRef<HTMLInputElement>(null);
+  const markdownRef = useRef<HTMLTextAreaElement>(null);
   return (
     <Form>
       <Stack gap={4}>
@@ -10,7 +13,7 @@ export function NoteForm() {
           <Col>
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
-              <Form.Control />
+              <Form.Control ref={titleRef} />
             </Form.Group>
           </Col>
           <Col>
@@ -22,7 +25,7 @@ export function NoteForm() {
           </Col>
           <Form.Group controlId="markdown">
             <Form.Label>Body</Form.Label>
-            <Form.Control required as="textarea" rows={15} />
+            <Form.Control required as="textarea" ref={markdownRef} rows={15} />
           </Form.Group>
         </Row>
         <Stack
