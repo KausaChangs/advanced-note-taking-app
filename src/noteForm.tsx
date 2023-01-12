@@ -36,7 +36,12 @@ export function NoteForm({ onSubmit }: NoteFormProps) {
             <Form.Group controlId="tags">
               <Form.Label>Tags</Form.Label>
               <Form.Control />
-              <CreatableReactSelect isMulti />
+              <CreatableReactSelect
+                value={selectedTags.map((tag) => {
+                  return { label: tag.label, value: tag.id };
+                })}
+                isMulti
+              />
             </Form.Group>
           </Col>
           <Form.Group controlId="markdown">
