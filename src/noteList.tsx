@@ -1,4 +1,5 @@
-import { Col, Row } from "react-bootstrap";
+import { Button, Col, Row, Stack } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function NoteList() {
   return (
@@ -7,7 +8,13 @@ export function NoteList() {
         <Col>
           <h1>Notes</h1>
         </Col>
-        <Col></Col>
+        <Col>
+          <Stack direction="horizontal" gap={2}>
+            <Link to="/new">
+              <Button variant="primary"> Create</Button>
+            </Link>
+          </Stack>
+        </Col>
       </Row>
     </>
   );
