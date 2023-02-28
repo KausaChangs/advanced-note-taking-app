@@ -1,4 +1,4 @@
-import { Button, Col, Row, Stack } from "react-bootstrap";
+import { Button, Col, Form, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export function NoteList() {
@@ -17,6 +17,16 @@ export function NoteList() {
           </Stack>
         </Col>
       </Row>
+      <Form>
+        <Row className="mb-4">
+          <Col>
+            <Form.Group controlId="title">
+              <Form.Label>Title</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+          </Col>
+        </Row>
+      </Form>
     </>
   );
 }
